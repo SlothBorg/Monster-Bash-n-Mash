@@ -6,10 +6,10 @@ body{
 article {
     margin: 1em auto;
     max-width: 40rem;
-    padding: 0 .62rem;
+    padding: .6rem;
     font-size: 1.25rem;
     color: #16161D;
-    background-color: rgba(233, 233, 226, 0.5);
+    background-color: rgba(233, 233, 226, 0.6);
 }
 h1,h2,h3 {line-height: 1.2;}
 p {line-height: 1.5;}
@@ -38,7 +38,7 @@ button {
 
 }
 .mb {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 .bb {
     border-bottom: 1px solid #16161D;
@@ -56,8 +56,8 @@ button {
     text-decoration: none;
     color: #16161D;
 }
-.blink{
-    animation:blinkingText 1.2s infinite;
+.blink-header{
+    animation:blinkingText 2s infinite;
 }
 @keyframes blinkingText{
     0% { color: #16161D; }

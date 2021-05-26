@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <article>
-    <header>
-      <h1 class="center blink">Sherdyl's 20s Memorial, "Monster" <em>Bash</em> n' <em>Mash</em>!</h1>
-    </header>
+  <header>
+    <h1 class="center blink-header">Sherdyl's 20s Memorial, "Monster" <em>Bash</em> n' <em>Mash</em>!</h1>
+  </header>
 
+  <article>
     <section class="mb">
       <details>
         <summary class="big-summary">What?</summary>
@@ -81,6 +81,7 @@
       <details>
         <summary class="big-summary">Materials</summary>
         <section class="pl pr">
+          <p>There will be a substantial amount </p>
           <ul>
             <li><emphasis>Power Tools</emphasis></li>
             <ul>
@@ -141,6 +142,10 @@
               <li>Varnishes</li>
               <li>Plastic Animals</li>
               <li>Plastic Skeletons</li>
+              <li>Wooden toothpicks</li>
+              <li>Wooden coffee stirrers</li>
+              <li>Wooden popcicle sticks</li>
+              <li>Wooden tongue depressors</li>
             </ul>
             <li><emphasis>What can I bring?</emphasis></li>
             <ul>
@@ -171,7 +176,7 @@
       </details>
     </section>
 
-    <section class="mb">
+    <section>
       <details>
         <summary class="big-summary">Virtual Participation</summary>
         <section class="pl pr">
@@ -203,7 +208,7 @@
       <br>
       Found a spelling mistake? <a href="#" onclick="setCookie()">Have a cookie!</a>
       <br>
-      <span class="copyleft">&copy;</span> 2021
+      <span class="copyleft">&copy;</span> <span id="year">2021</span>
     </small></p>
   </footer>
 
@@ -219,6 +224,10 @@
       document.cookie = cookieString + ';secure';
       alert("Enjoy your cookie!");
     }
+
+    setInterval(function(){
+      document.getElementById('year').innerHTML = Math.floor(1000 + Math.random() * 9000);
+    }, 1000);
   </script>
 </body>
 </html>
