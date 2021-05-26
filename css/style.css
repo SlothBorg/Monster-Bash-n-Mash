@@ -1,7 +1,11 @@
 body{
-    background-image: linear-gradient(rgba(233, 233, 226, 0.85), rgba(233, 233, 226, 0.85)), url('../img/background.jpg');
+    background-image: linear-gradient(rgba(233, 233, 226, 0.75), rgba(233, 233, 226, 0.75)), url('../img/background.jpg');
     background-attachment: fixed;
     background-position: center;
+}
+header {
+    margin: 1em auto;
+    max-width: 40rem;
 }
 article {
     margin: 1em auto;
@@ -9,7 +13,7 @@ article {
     padding: .6rem;
     font-size: 1.25rem;
     color: #16161D;
-    background-color: rgba(233, 233, 226, 0.6);
+    background-color: rgba(233, 233, 226, 0.7);
 }
 h1,h2,h3 {line-height: 1.2;}
 p {line-height: 1.5;}
@@ -34,8 +38,9 @@ emphasis {
     font-size: 1.26rem;
     color: #16161D;
 }
-button {
-
+.header{
+    line-height: 1.5em;
+    font-size: 2.5rem;
 }
 .mb {
     margin-bottom: 2rem;
