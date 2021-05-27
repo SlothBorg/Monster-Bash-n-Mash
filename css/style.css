@@ -3,17 +3,17 @@ body{
 
     background-position: center;
 }
-header {
-    margin: 1em auto;
-    max-width: 40rem;
-}
 article {
+    font-size: 1.25rem;
+    color: #16161D;
     margin: 1em auto;
     max-width: 40rem;
     padding: .6rem;
-    font-size: 1.25rem;
-    color: #16161D;
     background-color: rgba(233, 233, 226, 0.7);
+}
+header {
+    margin: 1em auto;
+    max-width: 40rem;
 }
 h1,h2,h3 {line-height: 1.2;}
 p {line-height: 1.5;}
