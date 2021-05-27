@@ -42,11 +42,17 @@ emphasis {
     line-height: 1.5em;
     font-size: 2.5rem;
 }
+.red {
+    color: #660000;
+}
 .mb {
     margin-bottom: 2rem;
 }
 .bb {
     border-bottom: 1px solid #16161D;
+}
+.pt {
+    padding-top: 1rem;
 }
 .pl {
     padding-left: 1rem;
@@ -78,4 +84,12 @@ emphasis {
 }
 .fs-small {
     font-size: .75em;
+}
+.box {
+    display: flex;
+    justify-content: center;
+}
+.icon {
+    width: auto;
+    height: 120px;
 }
