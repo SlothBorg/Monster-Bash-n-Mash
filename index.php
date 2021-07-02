@@ -262,7 +262,7 @@
           $deck = [];
           foreach (glob('img/cards/*') as $filename) {
               $path = pathinfo($filename);
-              $deck[] = $path['filename'];
+              $deck[] = $path['dirname'] . DIRECTORY_SEPARATOR . $path['filename'];
           }
           echo json_encode($deck);
       ?>;
