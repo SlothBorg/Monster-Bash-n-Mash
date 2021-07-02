@@ -96,3 +96,9 @@ emphasis {
     max-width: 40rem;
     height: auto;
 }
+.draw {
+    font-size: 2em;
+    padding: .25em;
+    margin: 0 auto;
+    display: block;
+}

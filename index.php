@@ -14,7 +14,7 @@
   <article>
 
     <section class="mb" id="draw">
-        <button onclick="draw()">Draw!</button>
+        <button onclick="draw()" class="draw">Draw!</button>
         <div id="cards">
         </div>
     </section>
