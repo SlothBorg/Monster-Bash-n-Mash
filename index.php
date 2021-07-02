@@ -249,10 +249,41 @@
       let audio = document.getElementById('audio');
       audio.play();
     }
+
     function setCookie() {
       let cookieString = Math.random().toString(16).substr(2, 1024);
       document.cookie = cookieString + ';secure';
       alert("Enjoy your cookie!");
+    }
+
+    function draw() {
+      // forgive this gross code, I know better!
+      let images = <?php
+          $deck = [];
+          foreach (glob('img/cards/*') as $filename) {
+              $path = pathinfo($filename);
+              $deck[] = $path['filename'];
+          }
+          echo json_encode($deck);
+      ?>;
+
+      let deck = shuffle(images);
+      let hand = [];
+      let n = 0;
+      while (n < 3) {
+        hand = hand.concat(deck.pop());
+      }
+
+      hand.forEach(showCard());
+
+    }
+
+    function shuffle(arr) {
+        return arr.sort(() => Math.random() - 0.5);
+    }
+
+    function showCard(card) {
+        console.log(card);
     }
 
     setInterval(function(){
