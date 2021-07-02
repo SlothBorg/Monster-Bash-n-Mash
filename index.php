@@ -261,8 +261,9 @@
       let images = <?php
           $deck = [];
           foreach (glob('img/cards/*') as $filename) {
-              $path = pathinfo($filename);
-              $deck[] = $path['dirname'] . DIRECTORY_SEPARATOR . $path['filename'];
+//              $path = pathinfo($filename);
+//              $deck[] = $path['dirname'] . DIRECTORY_SEPARATOR . $path['filename'] . '.' . $path['extension'];
+              $deck[] = $filename;
           }
           echo json_encode($deck);
       ?>;
