@@ -12,6 +12,11 @@
   </header>
 
   <article>
+
+    <section class="mb" id="draw">
+        <button onclick="draw()">Draw!</button>
+    </section>
+
     <section class="mb" id="what">
       <details>
         <summary class="big-summary">What?</summary>
@@ -261,9 +266,8 @@
       let images = <?php
           $deck = [];
           foreach (glob('img/cards/*') as $filename) {
-//              $path = pathinfo($filename);
-//              $deck[] = $path['dirname'] . DIRECTORY_SEPARATOR . $path['filename'] . '.' . $path['extension'];
-              $deck[] = $filename;
+              $card = pathinfo($filename);
+              $deck[] = $filename . '.' . $card['extension'];
           }
           echo json_encode($deck);
       ?>;
@@ -283,8 +287,8 @@
         return arr.sort(() => Math.random() - 0.5);
     }
 
-    function showCard(card) {
-        console.log(card);
+    function showCard(item) {
+        console.log(item);
     }
 
     setInterval(function(){
