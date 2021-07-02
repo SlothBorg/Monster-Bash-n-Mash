@@ -1,6 +1,5 @@
 body{
     background-image: linear-gradient(rgba(233, 233, 226, 0.7), rgba(233, 233, 226, 0.7)), url('../img/background.jpg');
-
     background-position: center;
 }
 article {
@@ -92,4 +91,8 @@ emphasis {
 .icon {
     width: auto;
     height: 72px;
+}
+.inspiration-card {
+    max-width: 40rem;
+    height: auto;
 }

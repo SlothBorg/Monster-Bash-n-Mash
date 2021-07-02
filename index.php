@@ -15,6 +15,8 @@
 
     <section class="mb" id="draw">
         <button onclick="draw()">Draw!</button>
+        <div id="cards">
+        </div>
     </section>
 
     <section class="mb" id="what">
@@ -266,20 +268,21 @@
       let images = <?php
           $deck = [];
           foreach (glob('img/cards/*') as $filename) {
-              $card = pathinfo($filename);
-              $deck[] = $filename . '.' . $card['extension'];
+              $deck[] = $filename;
           }
           echo json_encode($deck);
       ?>;
+      // let images = ["img\/cards\/0n8x7gzjrbg61.jpg","img\/cards\/13837_kelly-6.jpg","img\/cards\/1598250791453.jpg","img\/cards\/1599551748357.jpg","img\/cards\/1601626404799.jpg","img\/cards\/IMG_20210527_095133.jpg","img\/cards\/IMG_20210527_095144.jpg","img\/cards\/IMG_20210527_095150.jpg","img\/cards\/IMG_20210527_095156.jpg","img\/cards\/IMG_20210527_095533.jpg","img\/cards\/IMG_20210527_095540.jpg","img\/cards\/IMG_20210527_095545.jpg","img\/cards\/IMG_20210527_095624.jpg","img\/cards\/IMG_20210605_095338.jpg","img\/cards\/IMG_2974_Original.jpg","img\/cards\/IMG_6006_Original.HEIC.HEIC","img\/cards\/IMG_7374_Original.jpg","img\/cards\/IMG_7916.jpg","img\/cards\/IMG_8771.PNG","img\/cards\/IMG_8772.PNG","img\/cards\/IMG_8773.PNG","img\/cards\/IMG_8774.PNG","img\/cards\/IMG_8775.PNG","img\/cards\/IMG_8776.PNG","img\/cards\/IMG_8777.PNG","img\/cards\/IMG_9465_Original.jpg","img\/cards\/ffbgu8681sd51.jpg","img\/cards\/galpicgraitcaf-approaching-71x60cm-2012.jpg","img\/cards\/hopkinsville_goblins.jpg","img\/cards\/tzl0hoycnnk51.jpg"];
 
       let deck = shuffle(images);
       let hand = [];
       let n = 0;
-      while (n < 3) {
+      while (n < 5) {
         hand = hand.concat(deck.pop());
+        n++;
       }
 
-      hand.forEach(showCard());
+      showCard(hand);
 
     }
 
@@ -287,8 +290,15 @@
         return arr.sort(() => Math.random() - 0.5);
     }
 
-    function showCard(item) {
-        console.log(item);
+    function showCard(hand) {
+      let content = document.getElementById("cards");
+      content.innerHTML = '';
+      let html = ''
+      for (let i = 0; i < hand.length; i++) {
+        console.log(hand[i])
+        html += '<img src="' + hand[i] + '" class="inspiration-card" alt="image ' + i + '">\n';
+      }
+      content.innerHTML = html;
     }
 
     setInterval(function(){
